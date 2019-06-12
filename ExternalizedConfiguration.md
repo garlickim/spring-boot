@@ -17,7 +17,8 @@ Configuration 방식에는 properties 파일, yml 파일, 환경 변수, Command
 1. Value annotation 이용
 ~~~java
 @Value(${name})
-~~~
+String name;
+~~~  
 2. Environment 이용
 ~~~java
 @Autowired
@@ -25,3 +26,10 @@ private Environment env;
 
 env.getProperty("name");
 ~~~
+</br>
+
+##### application.properties가 있을 때, 읽어오는 위치에 따른 우선 순위(우선순위가 높은 순서대로 나열)
+1. /config subdirectory of the current directory : 현재 디렉토리 하위의 config 디렉토리에 위치한 properties 파일
+2. The current directory : 현재 디렉토리에 위치하는 properties 파일
+3. classpath /config package : 클래스 path의 config 패키지의 properties 파일
+4. The classpath root : 클래스 path 루트의 properties 파일
