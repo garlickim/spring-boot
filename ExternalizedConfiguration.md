@@ -6,8 +6,8 @@ Configuration 방식에는 properties 파일, yml 파일, 환경 변수, Command
 ##### Configuration 우선 순위를 하기와 같이 정의한다(많이 사용하는 방식에 대한 우선 순위만 정의함)  
 
 ~~~txt
-우선순위 1 : Command line arguments.  --> java **-foo=bar** -jar OO.jar
-우선순위 2 : Java System properties.  --> java **-Dfoo=bar** -jar OO.jar
+우선순위 1 : Command line arguments.  --> java -foo=bar -jar OO.jar
+우선순위 2 : Java System properties.  --> java -Dfoo=bar -jar OO.jar
 우선순위 3 : 패키지 jar 외부에 위치한 properties 파일
 우선순위 4 : 패키지 jar 내부에 위치한 properties 파일
 ~~~  
